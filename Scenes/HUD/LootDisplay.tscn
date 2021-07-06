@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://UI/NumberPad/Light_Theme.tres" type="Theme" id=1]
+[ext_resource path="res://Assets/GFX/Interface/PNG/glassPanel_cornerTR.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/HUD/LootDisplay.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Fonts/LabelText.tres" type="DynamicFont" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[node name="LootDisplay" type="NinePatchRect"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -100.0
+margin_right = 220.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 200, 80 )
+theme = ExtResource( 1 )
+texture = ExtResource( 2 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+script = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 180.0
+margin_bottom = 17.0
+custom_fonts/font = ExtResource( 4 )
+text = "Loot	"
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer"]
+margin_top = 21.0
+margin_right = 180.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 0, 38 )
+custom_styles/cursor = SubResource( 1 )
+custom_styles/selected_focus = SubResource( 2 )
+custom_styles/bg_focus = SubResource( 3 )
+custom_styles/cursor_unfocused = SubResource( 4 )
+custom_styles/selected = SubResource( 5 )
+custom_styles/bg = SubResource( 6 )
+max_columns = 4
+icon_scale = 0.2
