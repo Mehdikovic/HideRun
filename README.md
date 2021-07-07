@@ -1,2 +1,2 @@
 # Hide_and_Run
-Hide&amp;Run is stealth game made with Godot
+Hide&amp;Run is a stealth game made with Godot
